@@ -1,4 +1,6 @@
-//
-// Created by rustam on 24.04.2020.
-//
+#include <stdio.h>
 
+int main(void) {
+	printf("Hello World!\n");
+	return (0);
+}
