@@ -29,20 +29,52 @@ void		ft_print_matrix(t_data data)
 	}
 }
 
-int main(void) {
-	t_data data;
 
-	init_data(&data);
-	parser(&data);
-	ft_putnbr(data.start);
-	ft_putstr("\n");
-	ft_putnbr(data.end);
-	ft_putstr("\n");
-	ft_putnbr(data.size_matrix);
-	ft_putstr("\n");
-	ft_putnbr(data.numb_ants);
-	ft_putstr("\n");
-	ft_print_matrix(data);
+//int main()
+//{
+//	t_queue *q = create_queue();
+//	en_queue(q, 10);
+//	en_queue(q, 20);
+//	de_queue(q);
+//	de_queue(q);
+//	en_queue(q, 30);
+//	en_queue(q, 40);
+//	en_queue(q, 50);
+//	de_queue(q);
+//	printf("Queue Front : %d \n", q->front->key);
+//	printf("Queue Rear : %d", q->rear->key);
+//	return 0;
+//}
+
+
+int main(void) {
+//	t_data data;
+
+//	init_data(&data);
+//	parser(&data);
+//	ft_putnbr(data.start);
+//	ft_putstr("\n");
+//	ft_putnbr(data.end);
+//	ft_putstr("\n");
+//	ft_putnbr(data.size_matrix);
+//	ft_putstr("\n");
+//	ft_putnbr(data.numb_ants);
+//	ft_putstr("\n");
+//	ft_print_matrix(data);
+
+	int v = 5;
+	t_graph *graph = create_graph(v);
+	add_edge(graph, 0, 1);
+	add_edge(graph, 0, 4);
+	add_edge(graph, 1, 2);
+	add_edge(graph, 1, 3);
+	add_edge(graph, 1, 4);
+	add_edge(graph, 2, 3);
+	add_edge(graph, 3, 4);
+
+	bfs(0, graph);
+	// print the adjacency list representation of the above graph
+//	print_graph(graph);
 	return (0);
 
 }

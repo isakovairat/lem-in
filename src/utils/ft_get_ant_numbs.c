@@ -1,5 +1,5 @@
-#include <values.h>
 // TODO Поменять INT_MAX и INT_MIN
+#include <limits.h>
 #include "lem_in.h"
 
 int		ft_get_ant_numbs(const char *str)

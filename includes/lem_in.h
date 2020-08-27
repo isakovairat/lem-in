@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include "stdlib.h"
 #include "libft.h"
+
+#include "graph.h"
+#include "queue.h"
+
 # define E_MALLOC 1
 # define E_NO_VALID 2
 # define E_START 3
@@ -15,7 +19,12 @@
 # define E_ANT 9
 # define E_ROOM 10
 
-
+/*
+ *
+ *
+ * DEPRECATED
+ *
+ * */
 typedef struct	s_room
 {
 	char	*name;
