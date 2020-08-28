@@ -4,13 +4,13 @@ void en_queue(t_queue *queue, int k) {
 	t_queue_node *temp;
 
 	temp = new_node(k);
-	if (queue->rear == NULL)
+	if (queue->last == NULL)
 	{
-		queue->rear = temp;
-		queue->front = queue->rear;
+		queue->last = temp;
+		queue->first = queue->last;
 		return;
 	}
 
-	queue->rear->next = temp;
-	queue->rear = temp;
+	queue->last->next = temp;
+	queue->last = temp;
 }

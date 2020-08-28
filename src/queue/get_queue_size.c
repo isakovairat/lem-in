@@ -7,10 +7,10 @@ size_t get_queue_size(t_queue *queue) {
 	size = 0;
 	if (queue == NULL)
 		return (0);
-	if (queue->rear == queue->front)
+	if (queue->last == queue->first)
 		return (1);
-	temp = queue->front;
-	while (temp != queue->rear)
+	temp = queue->first;
+	while (temp != queue->last)
 	{
 		temp = temp->next;
 		size++;

@@ -4,14 +4,14 @@ int		de_queue(t_queue *queue) {
 	t_queue_node *temp;
 	int key;
 
-		if (queue->front == NULL) {
+		if (queue->first == NULL) {
 		return -1;
 	}
-	temp = queue->front;
+	temp = queue->first;
 	key = temp->key;
-	queue->front = queue->front->next;
-	if (queue->front == NULL)
-		queue->rear = NULL;
+	queue->first = queue->first->next;
+	if (queue->first == NULL)
+		queue->last = NULL;
 	free(temp);
 	return key;
 }

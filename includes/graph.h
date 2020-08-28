@@ -5,7 +5,7 @@
 #ifndef LEM_IN_GRAPH_H
 # define LEM_IN_GRAPH_H
 
-#include "libft.h"
+#include "lem_in.h"
 //GRAPH
 typedef struct				s_lst_node_edges
 {

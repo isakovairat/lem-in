@@ -4,7 +4,7 @@ t_queue *create_queue() {
 	t_queue	*queue;
 
 	queue = (t_queue*)ft_memalloc(sizeof(t_queue));
-	queue->rear = NULL;
-	queue->front = queue->rear;
+	queue->last = NULL;
+	queue->first = queue->last;
 	return (queue);
 }

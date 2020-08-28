@@ -41,43 +41,44 @@ void		ft_print_matrix(t_data data)
 //	en_queue(q, 40);
 //	en_queue(q, 50);
 //	de_queue(q);
-//	printf("Queue Front : %d \n", q->front->key);
-//	printf("Queue Rear : %d", q->rear->key);
+//	printf("Queue Front : %d \n", q->first->key);
+//	printf("Queue Rear : %d", q->last->key);
 //	return 0;
 //}
 
 int main(void) {
-	t_data data;
-
-	init_data(&data);
-	parser(&data);
-	ft_putnbr(data.start);
-	ft_putstr("\n");
-	ft_putnbr(data.end);
-	ft_putstr("\n");
-	ft_putnbr(data.size_matrix);
-	ft_putstr("\n");
-	ft_putnbr(data.numb_ants);
-	ft_putstr("\n");
+//	t_data data;
+//
+//	init_data(&data);
+//	parser(&data);
+//	ft_putnbr(data.start);
+//	ft_putstr("\n");
+//	ft_putnbr(data.end);
+//	ft_putstr("\n");
+//	ft_putnbr(data.size_matrix);
+//	ft_putstr("\n");
+//	ft_putnbr(data.numb_ants);
+//	ft_putstr("\n");
 	ft_print_matrix(data);
 
-//	int v = 5;
-//	t_graph *graph = create_graph(v);
-//	add_edge(graph, 0, 1);
-//	add_edge(graph, 0, 4);
-//	add_edge(graph, 1, 2);
-//	add_edge(graph, 1, 3);
-//	add_edge(graph, 1, 4);
-//	add_edge(graph, 2, 3);
-//	add_edge(graph, 3, 4);
-////	dijkstra(graph, 0);
-//
+	int v = 5;
+	t_graph *graph = create_graph(v);
+	add_edge(graph, 0, 1);
+	add_edge(graph, 0, 4);
+	add_edge(graph, 1, 2);
+	add_edge(graph, 1, 3);
+	add_edge(graph, 1, 4);
+	add_edge(graph, 2, 3);
+	add_edge(graph, 3, 4);
+//	dijkstra(graph, 0);
+
+//	printf("%d\n", graph->edges[3].vertex_name);
 //	bfs(0, graph);
-////	printf("\n\n\n");
+//	printf("\n\n\n");
 //	dfs(graph, 0);
-////	free(graph->visited);
-//	// print the adjacency list representation of the above graph
-////	print_graph_edges(graph);
-//	return (0);
+//	free(graph->visited);
+	// print the adjacency list representation of the above graph
+	print_graph(graph);
+	return (0);
 
 }
