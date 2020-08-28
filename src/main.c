@@ -45,7 +45,7 @@ void		ft_print_matrix(t_data data)
 //	printf("Queue Rear : %d", q->rear->key);
 //	return 0;
 //}
-
+void bfs_edges(int s, t_graph *graph);
 
 int main(void) {
 //	t_data data;
@@ -73,10 +73,12 @@ int main(void) {
 	add_edge(graph, 3, 4);
 
 //	bfs(0, graph);
+//	printf("\n\n\n");
 	dfs(graph, 0);
-	free(graph->visited);
+//	free(graph->visited);
 	// print the adjacency list representation of the above graph
-//	print_graph(graph);
+//	print_graph_edges(graph);
+//	bfs_edges(0, graph);
 	return (0);
 
 }

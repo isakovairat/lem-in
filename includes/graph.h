@@ -7,28 +7,30 @@
 
 #include "libft.h"
 //GRAPH
-typedef struct	s_lst_node
+typedef struct				s_lst_node_edges
 {
-	int vertex_dest;
-	struct s_lst_node *next;
-}
-		t_lst_node;
+	int						vertex_start;
+	int						vertex_end;
+	int						edge_weight;
+	struct s_lst_node_edges	*next;
+}							t_lst_node_edges;
 
-typedef struct	s_lst
+typedef struct	s_lst_edges
 {
-	int vertex_name;
-	struct s_lst_node *head;
-}				t_lst;
+	int		vertex_name;
+	struct s_lst_node_edges *head;
+}				t_lst_edges;
 
 typedef struct		s_graph
 {
 	int				v;
-	struct s_lst	*lst;
+	struct s_lst_edges		*edges;
 	int				*visited;
 }					t_graph;
 
-t_lst_node		*new_lst_node(int dest);
+
 t_graph			*create_graph(int v);
+t_lst_node_edges *new_lst_node_edge(int src, int dest, int weight);
 void			bzero_visited(t_graph *graph);
 void			print_graph(t_graph *graph);
 void			add_edge(t_graph *graph, int src, int dest);

@@ -3,7 +3,7 @@
 void bfs(int s, t_graph *graph) {
 	int				current_vertex;
 	t_queue			*queue;
-	struct s_lst_node *temp;
+	struct s_lst_node_edges *temp;
 	int vertex;
 
 	bzero_visited(graph);
@@ -15,10 +15,10 @@ void bfs(int s, t_graph *graph) {
 		current_vertex = queue->front->key;
 		de_queue(queue);
 		printf("Visited %d\n", current_vertex);
-		temp = graph->lst[current_vertex].head;
+		temp = graph->edges[current_vertex].head;
 		while (temp)
 		{
-			vertex = temp->vertex_dest;
+			vertex = temp->vertex_end;
 			if (graph->visited[vertex] == 0) {
 				graph->visited[vertex] = 1;
 				en_queue(queue, vertex);

@@ -11,4 +11,3 @@ void	bzero_visited(t_graph *graph)
 		i++;
 	}
 }
-

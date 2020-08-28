@@ -8,10 +8,10 @@ t_graph *create_graph(int v) {
 	graph = (t_graph*)ft_memalloc(sizeof(graph));
 	graph->v = v;
 	graph->visited = (int*)ft_memalloc(sizeof(int) * graph->v);
-	graph->lst = (t_lst*)ft_memalloc(v * sizeof(t_lst));
+	graph->edges = (t_lst_edges*)ft_memalloc(v * sizeof(t_lst_node_edges));
 	while (i < v)
 	{
-		graph->lst[i].head = NULL;
+		graph->edges[i].head = NULL;
 		i++;
 	}
 	return (graph);
