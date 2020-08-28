@@ -7,6 +7,7 @@ t_graph *create_graph(int v) {
 	i = 0;
 	graph = (t_graph*)ft_memalloc(sizeof(graph));
 	graph->v = v;
+	graph->visited = (int*)ft_memalloc(sizeof(int) * graph->v);
 	graph->lst = (t_lst*)ft_memalloc(v * sizeof(t_lst));
 	while (i < v)
 	{

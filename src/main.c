@@ -72,7 +72,9 @@ int main(void) {
 	add_edge(graph, 2, 3);
 	add_edge(graph, 3, 4);
 
-	bfs(0, graph);
+//	bfs(0, graph);
+	dfs(graph, 0);
+	free(graph->visited);
 	// print the adjacency list representation of the above graph
 //	print_graph(graph);
 	return (0);

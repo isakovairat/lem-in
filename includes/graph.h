@@ -3,8 +3,9 @@
 //
 
 #ifndef LEM_IN_GRAPH_H
-#define LEM_IN_GRAPH_H
+# define LEM_IN_GRAPH_H
 
+#include "libft.h"
 //GRAPH
 typedef struct	s_lst_node
 {
@@ -23,12 +24,17 @@ typedef struct		s_graph
 {
 	int				v;
 	struct s_lst	*lst;
+	int				*visited;
 }					t_graph;
 
 t_lst_node		*new_lst_node(int dest);
 t_graph			*create_graph(int v);
+void			bzero_visited(t_graph *graph);
 void			print_graph(t_graph *graph);
 void			add_edge(t_graph *graph, int src, int dest);
 void			bfs(int s, t_graph *graph);
+void			dfs(t_graph *graph, int s);
+
+
 
 #endif //LEM_IN_GRAPH_H
