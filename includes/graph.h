@@ -23,9 +23,10 @@ typedef struct	s_lst_edges
 
 typedef struct		s_graph
 {
-	int				v;
+	int						v;
 	struct s_lst_edges		*edges;
-	int				*visited;
+	int						*visited;
+	int						*d;
 }					t_graph;
 
 

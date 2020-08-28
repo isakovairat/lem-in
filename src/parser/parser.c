@@ -31,7 +31,7 @@ void		valid(char *line, t_data *data, int *i)
 void		parser(t_data *data)
 {
 	char	*line;
-	int		i;ft_putstr("\n");
+	int		i;
 
 	i = 0;
 	line = NULL;

@@ -16,7 +16,7 @@ typedef struct			s_queue
 
 t_queue			*create_queue();
 t_queue_node	*new_node(int k);
-void			de_queue(t_queue *queue);
+int				de_queue(t_queue *queue);
 void			en_queue(t_queue *queue, int k);
 size_t			get_queue_size(t_queue *queue);
 void			delete_queue(t_queue **p_queue);

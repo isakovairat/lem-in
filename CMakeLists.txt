@@ -20,7 +20,11 @@ add_executable(lem_in
         src/parser/parse_links.c
         src/parser/parse_room.c
         src/utils/ft_get_ant_numbs.c
-        src/utils/print_str.c src/lst/create_graph.c src/lst/add_edge.c src/lst/print_graph.c src/lst/bfs.c src/queue/create_queue.c includes/queue.h src/queue/new_node.c src/queue/en_queue.c src/queue/de_queue.c src/queue/get_queue_size.c src/queue/delete_queue.c src/queue/is_queue_empty.c includes/graph.h src/lst/bzero_visited.c src/lst/dfs.c src/lst/new_lst_node_edge.c)
+        src/utils/print_str.c src/graph/create_graph.c src/graph/add_edge.c src/graph/print_graph.c src/graph/bfs.c
+        src/queue/create_queue.c includes/queue.h src/queue/new_node.c src/queue/en_queue.c
+        src/queue/de_queue.c src/queue/get_queue_size.c src/queue/delete_queue.c
+        src/queue/is_queue_empty.c includes/graph.h src/graph/bzero_visited.c src/graph/dfs.c
+        src/graph/new_lst_node_edge.c src/graph/bzero_d.c)
 
 target_link_libraries(lem_in
         "ft"
